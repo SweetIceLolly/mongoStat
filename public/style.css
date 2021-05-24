@@ -1,0 +1,79 @@
+* {
+    font-family: Arial, 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0 auto;
+}
+
+#opchartdiv {
+    width: 100%;
+    height: 300px;
+}
+
+#netchartdiv {
+    width: 100%;
+    height: 200px;
+}
+
+.panel {
+    display: inline-block;
+    margin: 15px;
+    min-width: 160px;
+    vertical-align: middle;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.inner {
+    margin: 10px;
+}
+
+.inner p {
+    font-size: 16px;
+    color: white;
+}
+
+.statnumber p {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.statnumber p {
+    margin: 10px 0;
+}
+
+.uptimepanel {
+    background-color: #00a65a;
+}
+
+.cmdpanel {
+    background-color: #2790ff;
+}
+
+.updatepanel {
+    background-color: #e49d18;
+}
+
+.querypanel {
+    background-color: #ff6347;
+}
+
+.inspanel {
+    background-color: #329632;
+}
+
+.delpanel {
+    background-color: #3cb371;
+}
+
+.morepanel {
+    background-color: #6a5a69;
+}
+
+.netpanel {
+    background-color: #f39c12;
+}

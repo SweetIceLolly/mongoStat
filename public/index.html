@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DreamY数据库状态</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <body>
+        <div id="connstatus">正在连接, 请稍后...</div>
+        <div id="opchartdiv">
+            <canvas id="opchart"></canvas>
+        </div>
+        <div id="netchartdiv">
+            <canvas id="netchart"></canvas>
+        </div>
+        <div class="panel uptimepanel">
+            <div class="inner">
+                <p>数据库已运行</p>
+                <h3 class="statnumber">
+                    <span id="uptime"><p>--天 --:--:--</p></span>
+                </h3>
+                <h3 class="statnumber">
+                    <span id="conncnt"><p>当前连接数: -</p></span>
+                </h3>
+            </div>
+        </div>
+        <div class="panel cmdpanel">
+            <div class="inner">
+                <p>命令数</p>
+                <h3 class="statnumber">
+                    <span id="cmdcnttotal"><p>-</p></span>
+                </h3>
+                <h3 class="statnumber">
+                    <span id="cmdcnt"><p>-次/秒</p></span>
+                </h3>
+            </div>
+        </div>
+        <div class="panel updatepanel">
+            <div class="inner">
+                <p>更新数</p>
+                <h3 class="statnumber">
+                    <span id="updatecnttotal"><p>-</p></span>
+                </h3>
+                <h3 class="statnumber">
+                    <span id="updatecnt"><p>-次/秒</p></span>
+                </h3>
+            </div>
+        </div>
+        <div class="panel querypanel">
+            <div class="inner">
+                <p>查询数</p>
+                <h3 class="statnumber">
+                    <span id="querycnttotal"><p>-</p></span>
+                </h3>
+                <h3 class="statnumber">
+                    <span id="querycnt"><p>-次/秒</p></span>
+                </h3>
+            </div>
+        </div>
+        <div class="panel inspanel">
+            <div class="inner">
+                <p>插入数</p>
+                <h3 class="statnumber">
+                    <span id="inscnttotal"><p>-</p></span>
+                </h3>
+                <h3 class="statnumber">
+                    <span id="inscnt"><p>-次/秒</p></span>
+                </h3>
+            </div>
+        </div>
+        <div class="panel delpanel">
+            <div class="inner">
+                <p>删除数</p>
+                <h3 class="statnumber">
+                    <span id="delcnttotal"><p>-</p></span>
+                </h3>
+                <h3 class="statnumber">
+                    <span id="delcnt"><p>-次/秒</p></span>
+                </h3>
+            </div>
+        </div>
+        <div class="panel morepanel">
+            <div class="inner">
+                <p>获取更多数</p>
+                <h3 class="statnumber">
+                    <span id="morecnttotal"><p>-</p></span>
+                </h3>
+                <h3 class="statnumber">
+                    <span id="morecnt"><p>-次/秒</p></span>
+                </h3>
+            </div>
+        </div>
+        <div class="panel netpanel">
+            <div class="inner">
+                <p>网络流量</p>
+                <h3 class="statnumber">
+                    <span id="netin"><p>收: -KB/秒</p></span>
+                </h3>
+                <h3 class="statnumber">
+                    <span id="netout"><p>发: -KB/秒</p></span>
+                </h3>
+            </div>
+        </div>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="dystat.js"></script>
+    </body>
+</html>
