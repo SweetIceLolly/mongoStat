@@ -152,13 +152,16 @@ $(() => {
     let deltaDel = stat.del_cnt - prevStat.del_cnt;
     let deltaMore = stat.more_cnt - prevStat.more_cnt;
     let serverTime = new Date(stat.timestamp);
-    let serverUptime = new Date(stat.uptime);
+    let uptimeDay = Math.floor(stat.uptime / 3600 / 24);
+    let uptimeHour = Math.floor(stat.uptime % (3600 * 24) / 3600);
+    let uptimeMin = Math.floor(stat.uptime % 3600 / 60);
+    let uptimeSec = stat.uptime % 60;
 
     uptime.html($('<p>', { text:
-      serverUptime.getDay() + '天' +
-      ((serverTime.getHours()) > 0 ? (('0' + serverTime.getHours()).substr(-2) + '小时') : '') +
-      ((serverTime.getMinutes()) > 0 ? (('0' + serverTime.getMinutes()).substr(-2) + '分钟') : '') +
-      ((serverTime.getSeconds()) > 0 ? (('0' + serverTime.getSeconds()).substr(-2) + '秒') : '')
+      uptimeDay + '天' +
+      (uptimeHour > 0 ? (('0' + uptimeHour).substr(-2) + '小时') : '') +
+      (uptimeMin > 0 ? (('0' + uptimeMin).substr(-2) + '分钟') : '') +
+      (uptimeSec > 0 ? (('0' + uptimeSec).substr(-2) + '秒') : '')
     }));
     cmdcnt.html($('<p>', { text: deltaCmd + '次/秒' }));
     cmdcnt_total.html($('<p>', { text: stat.cmd_cnt }));
